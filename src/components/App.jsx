@@ -6,14 +6,14 @@ import '../App.css'
 function App() {
   
   return (
-    <div>
+    <div className='container'>
       <nav>
         <ul>
           <li>
             <Link to="/home">Home</Link>
           </li>
           <li>
-            <Link to="/shop/">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </li>
           <li>
             <Link to="/cart">Cart</Link>
