@@ -6,7 +6,12 @@ const key = "90cc2d37097041038ea82cf6fc69d6d5";
 
 function getGamePrice(var1, var2) {
     let x = var1 / var2;
-    return `$${(Math.ceil((x / 5) * 5) - 0.01)}`
+    let price = (Math.ceil((x / 5) * 5) - 0.01)
+    console.log(price)
+    if (price < 0 || Number.isNaN(price)){
+        price = 15.99
+    }
+    return `$${price}`
 }
 
 const useData = (view) => {
