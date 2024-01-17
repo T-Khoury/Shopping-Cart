@@ -75,11 +75,22 @@ button:focus-visible {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
+.cart-game-card img{
+  max-width: 180px;
+  object-fit: fill;
+  aspect-ratio: 16 / 9;
+}
+
 .gameCard img {
   max-width: 275px;
   object-fit: fill;
   aspect-ratio: 16 / 9;
 }
+
+.modal-closed {
+  display: none;
+}
+
 
 
 

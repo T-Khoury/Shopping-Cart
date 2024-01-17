@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useOutletContext } from "react-router-dom";
 import Card from "./GameCard";
 import SideBar from "./ShopSideBar";
 
@@ -7,7 +8,6 @@ const key = "90cc2d37097041038ea82cf6fc69d6d5";
 function getGamePrice(var1, var2) {
     let x = var1 / var2;
     let price = (Math.ceil((x / 5) * 5) - 0.01)
-    console.log(price)
     if (price < 0 || Number.isNaN(price)){
         price = 15.99
     }
@@ -54,12 +54,13 @@ const useData = (view) => {
 const Shop = () => {
     const [view, setView] = useState({ mode: "sorted", type: "upcoming"});
     const { data, error, loading } = useData(view);
+    const [cartItems, setCartItems] = useOutletContext();
 
 
     if (error) return <p>A network error was encountered</p>;
     if (loading) return <p>Loading...</p>
 
-    console.log(data)
+    console.log(cartItems)
 
     const cards = data.results.map(game =>
         <Card
@@ -69,6 +70,8 @@ const Shop = () => {
             name={game.name}
             image={game.background_image}
             price={getGamePrice(game.metacritic, game.rating)}
+            cartItems={cartItems}
+            setCartItems={setCartItems}
         />
     )
     
