@@ -1,12 +1,7 @@
 import CartModalGameCard from "./CartModalGameCard";
 
-const CartModal = ({ isOpen, cartItems, setCartItems }) => {
+const CartModal = ({ isOpen, setCartModalOpen, cartItems, setCartItems }) => {
     console.log(isOpen);
-
-    if (!isOpen) {
-        return null
-    }
-
     let cart = cartItems.map(game =>
         <CartModalGameCard
             id={game.id}
@@ -14,14 +9,28 @@ const CartModal = ({ isOpen, cartItems, setCartItems }) => {
             name={game.name}
             image={game.image}
             price={game.price}
+            cartItems={cartItems}
             setCartItems={setCartItems}
         />
     )
+    
+    function handleClick(e) {
+        if (e.target.className === "cart-modal") {
+            setCartModalOpen(false)
+        }
+        
+    }
+    if (!isOpen) {
+        return null
+    }
+    
     return (
-        <div>
-            <p>Hello</p>
-            <div>
-                {cart}
+        <div className="cart-modal" onClick={handleClick}>
+            <div className="cart-modal-content">
+                <p>Hello</p>
+                <div className="cart-items">
+                    {cart}
+                </div>
             </div>
         </div>
     )

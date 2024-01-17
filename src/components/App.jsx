@@ -35,6 +35,7 @@ function App() {
       </nav>
       <CartModal
       isOpen={cartModalOpen}
+      setCartModalOpen={setCartModalOpen}
       setCartItems={setCartItems}
       cartItems={cartItems}
       />
