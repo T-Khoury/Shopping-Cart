@@ -8,7 +8,8 @@ const CartModal = ({ isOpen, setCartModalOpen, cartItems, setCartItems }) => {
             key={game.key}
             name={game.name}
             image={game.image}
-            price={game.price}
+            quantity={game.quantity}
+            price={`$${Number(game.price.slice(1)) * game.quantity}`}
             cartItems={cartItems}
             setCartItems={setCartItems}
         />
