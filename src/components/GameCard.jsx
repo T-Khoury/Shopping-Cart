@@ -1,7 +1,7 @@
 const Card = ({ id, name, image, price, setCartItems, cartItems }) => {
 
     function handleCartButton() {
-        let newCart = cartItems;
+        let newCart = [...cartItems];
 
         if (newCart.some(item => item.id === id)) {
             let item = newCart.find(item => item.id === id)

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import CartModal from './CartModal';
+import CartButton from './CartButton';
 import '../App.css'
 
 
@@ -27,9 +28,7 @@ function App() {
           </li>
           <li>
             {/*<Link to="/cart">Cart</Link>*/}
-            <button
-            onClick={handleModalButton}
-            >Cart</button>
+            <CartButton quantity={cartItems.length} handleModalButton={handleModalButton}/>
           </li>
         </ul>
       </nav>
