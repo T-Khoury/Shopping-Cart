@@ -23,7 +23,7 @@ const useData = (view) => {
         let url;
         if (view.mode === 'genre') {
             url = `https://api.rawg.io/api/games?genres=${view.type}&key=${key}`
-        } else {
+        } else if (view.mode === 'sorted') {
             switch (view.type) {
                 case 'top-rated':
                     url = `https://api.rawg.io/api/games?ordering=-metacritic&key=${key}`;
@@ -34,8 +34,11 @@ const useData = (view) => {
                 case 'upcoming':
                     url = `https://api.rawg.io/api/games?dates=2024-02-01,2024-12-31&key=${key}`;
                     break;
-            }
+            } 
+        } else {
+            url = `https://api.rawg.io/api/games?search=${view.type}&key=${key}`
         }
+        
         fetch(url, { mode: "cors" })
             .then((response) => {
                 if (response.status >= 400) {
@@ -80,8 +83,7 @@ const Shop = () => {
         <h2>Hello</h2>
         <form onSubmit={e => {
             e.preventDefault();
-            console.log(e.target[0].value)
-            setView({ mode: "genre", type: e.target[0].value})
+            setView({ mode: "search", type: e.target[0].value})
             e.target.reset()
         }}>
             <input type="text" />
