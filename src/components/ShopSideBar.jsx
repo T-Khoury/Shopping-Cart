@@ -38,7 +38,7 @@ const SideBar = ({ setView }) => {
             </div>
             <div className="side-nav-bottom">
                 <h3>Genres</h3>
-                <ul>{genreList}</ul>
+                <ul className="genre-list">{genreList}</ul>
             </div>
         </div>
     )

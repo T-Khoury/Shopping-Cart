@@ -85,10 +85,11 @@ nav ul {
 
 
 .cards {
-  max-width: 100vw;
+  max-width: 100%;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-area: main;
 }
 
 .cart-button {
@@ -137,9 +138,35 @@ nav ul {
   aspect-ratio: 16 / 9;
 }
 
+.genre-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal-closed {
   display: none;
 }
+
+.shop {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "search search"
+    "sidebar main";
+}
+
+.shop-side-nav {
+  grid-area: sidebar;
+}
+
+.side-nav-top, .side-nav-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 
 
 
