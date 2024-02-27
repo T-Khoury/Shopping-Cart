@@ -67,12 +67,37 @@ button:focus-visible {
   }
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 .cards {
   max-width: 100vw;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.cart-button {
+  height: 40px;
+}
+
+.cart-count {
+  position: relative;
+  bottom: 60px;
 }
 
 .cart-game-card img{
@@ -115,6 +140,7 @@ button:focus-visible {
 .modal-closed {
   display: none;
 }
+
 
 
 

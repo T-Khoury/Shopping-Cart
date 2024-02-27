@@ -1,9 +1,13 @@
+import carticon from "../assets/shopping_cart.svg"
 
 const CartButton = ({ quantity, handleModalButton }) => {
 
     return (
         <>
-            <button onClick={handleModalButton}>{quantity}</button>
+            <button className="cart-button" onClick={handleModalButton}>
+                <img src={carticon} alt=""/>
+                <p className="cart-count">{quantity}</p>
+            </button>
         </>
     )
 }

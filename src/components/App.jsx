@@ -19,6 +19,9 @@ function App() {
   return (
     <div className='container'>
       <nav>
+        <div className="site-title">
+          <h1>Game Stuff</h1>
+        </div>
         <ul>
           <li>
             <Link to="/home">Home</Link>
