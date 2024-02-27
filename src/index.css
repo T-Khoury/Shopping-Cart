@@ -162,6 +162,14 @@ nav ul {
   display: none;
 }
 
+.searchbar {
+  width: 60%;
+  height: 1.5em;
+  text-align: end;
+  font-size: 1em;
+  padding-right: 5px;
+}
+
 .shop {
   display: grid;
   grid-template-columns: 1fr 4fr;

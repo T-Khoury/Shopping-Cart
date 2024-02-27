@@ -87,8 +87,8 @@ const Shop = () => {
                 setView({ mode: "search", type: e.target[0].value})
                 e.target.reset()
             }}>
-                <input type="text" />
-                <button>Search</button>
+                <input className="searchbar" type="text" />
+                <button className="searchbar-button">Search</button>
             </form>
             <SideBar setView={setView}/>
             <div className="cards">
