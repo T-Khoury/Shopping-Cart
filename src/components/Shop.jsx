@@ -80,18 +80,20 @@ const Shop = () => {
     
     return (
     <> 
-        <h2>Hello</h2>
-        <form onSubmit={e => {
-            e.preventDefault();
-            setView({ mode: "search", type: e.target[0].value})
-            e.target.reset()
-        }}>
-            <input type="text" />
-            <button>Search</button>
-        </form>
-        <SideBar setView={setView}/>
-        <div className="cards">
-            {cards}
+        <div className="shop">
+            <h2>Hello</h2>
+            <form onSubmit={e => {
+                e.preventDefault();
+                setView({ mode: "search", type: e.target[0].value})
+                e.target.reset()
+            }}>
+                <input type="text" />
+                <button>Search</button>
+            </form>
+            <SideBar setView={setView}/>
+            <div className="cards">
+                {cards}
+            </div>
         </div>
     </>
     )
