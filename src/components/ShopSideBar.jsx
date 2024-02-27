@@ -3,24 +3,30 @@ import { genres, sorted } from "../assets/viewData"
 const SideBar = ({ setView }) => {
 
     const genreList = genres.map(genre =>
-        <a
-        href="#"
+        <li
         key={genre.slug}
-        id={genre.slug}
-        onClick={handleGenreChange}
         >
-            {genre.name}
-        </a>
+            <a
+            href="#"
+            id={genre.slug}
+            onClick={handleGenreChange}
+            >
+                {genre.name}
+            </a>
+        </li>
     )
     const sortedList = sorted.map(view => 
-        <a
-        href="#"
+        <li
         key={view.slug}
-        id={view.slug}
-        onClick={handleSortChange}
         >
-            {view.name}
-        </a>
+            <a
+            href="#"
+            id={view.slug}
+            onClick={handleSortChange}
+            >
+                {view.name}
+            </a>
+        </li>
     )
     function handleGenreChange(e) {
         console.log(e.target.id)
@@ -34,7 +40,7 @@ const SideBar = ({ setView }) => {
         <div className="shop-side-nav">
             <div className="side-nav-top">
                 <h3>Sort</h3>
-                {sortedList}
+                <ul className="sorting-list">{sortedList}</ul>
             </div>
             <div className="side-nav-bottom">
                 <h3>Genres</h3>

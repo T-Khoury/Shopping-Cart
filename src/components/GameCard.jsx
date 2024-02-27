@@ -27,7 +27,7 @@ const Card = ({ id, name, image, price, setCartItems, cartItems }) => {
         id={id}
         >
             <img src={image}/>
-            <h3>{name}</h3>
+            <h4>{name}</h4>
             <p>{price}</p>
             <button
             onClick={handleCartButton}

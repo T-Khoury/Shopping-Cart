@@ -35,6 +35,11 @@ h1 {
   line-height: 1.1;
 }
 
+h3 {
+  font-size: 2em;
+  margin: 5px 0;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -138,10 +143,20 @@ nav ul {
   aspect-ratio: 16 / 9;
 }
 
-.genre-list {
+.genre-list, .sorting-list {
   display: flex;
   flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+
+.genre-list li, .sorting-list li {
+  width: fit-content;
+  font-size: 1.2em;
+  padding: 5px 0;
+}
+
 
 .modal-closed {
   display: none;
@@ -158,11 +173,16 @@ nav ul {
 
 .shop-side-nav {
   grid-area: sidebar;
+  text-align: start;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
 }
 
 .side-nav-top, .side-nav-bottom {
   display: flex;
   flex-direction: column;
+  position: sticky;
 }
 
 
