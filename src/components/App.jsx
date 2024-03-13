@@ -10,9 +10,32 @@ function App() {
   const [cartModalOpen, setCartModalOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
 
+  
+
   function handleModalButton() {
     let status = !cartModalOpen;
     setCartModalOpen(status);
+  }
+
+  function handleCartButton(name, image, price, id) {
+    let newCart = [...cartItems];
+
+    if (newCart.some(item => item.id === id)) {
+        let item = newCart.find(item => item.id === id)
+        item.quantity += 1;
+        console.log(newCart)
+    } else {
+        newCart.push({
+            name: name,
+            image: image,
+            price: price,
+            id: id,
+            key: id,
+            quantity: 1
+        })
+    }
+    
+    setCartItems(newCart)
   }
 
 
@@ -41,7 +64,7 @@ function App() {
       setCartItems={setCartItems}
       cartItems={cartItems}
       />
-      <Outlet context={[cartItems, setCartItems]}/>
+      <Outlet context={{ cartItems, setCartItems, handleCartButton }}/>
       <footer></footer>
     </div>
   )

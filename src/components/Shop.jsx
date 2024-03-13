@@ -5,7 +5,7 @@ import SideBar from "./ShopSideBar";
 
 const key = "90cc2d37097041038ea82cf6fc69d6d5";
 
-function getGamePrice(var1, var2) {
+export function getGamePrice(var1, var2) {
     let x = var1 / var2;
     let price = (Math.ceil((x / 5) * 5) - 0.01)
     if (price < 0 || Number.isNaN(price)){
@@ -14,7 +14,7 @@ function getGamePrice(var1, var2) {
     return `$${price}`
 }
 
-const useData = (view) => {
+  const useData = (view) => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -54,10 +54,10 @@ const useData = (view) => {
     return { data, error, loading }
 }
 
-const Shop = () => {
+export const Shop = () => {
     const [view, setView] = useState({ mode: "sorted", type: "upcoming"});
     const { data, error, loading } = useData(view);
-    const [cartItems, setCartItems] = useOutletContext();
+    const { cartItems, setCartItems, handleCartButton } = useOutletContext();
 
 
     if (error) return <p>A network error was encountered</p>;
@@ -75,6 +75,7 @@ const Shop = () => {
             price={getGamePrice(game.metacritic, game.rating)}
             cartItems={cartItems}
             setCartItems={setCartItems}
+            handleCartButton={handleCartButton}
         />
     )
     
@@ -100,5 +101,6 @@ const Shop = () => {
 
 }
 
-export default Shop
+// export default Shop
+
 
