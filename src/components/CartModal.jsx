@@ -28,7 +28,7 @@ const CartModal = ({ isOpen, setCartModalOpen, cartItems, setCartItems }) => {
     return (
         <div className="cart-modal" onClick={handleClick}>
             <div className="cart-modal-content">
-                <p>Hello</p>
+                <p>Shopping Cart</p>
                 <div className="cart-items">
                     {cart}
                 </div>

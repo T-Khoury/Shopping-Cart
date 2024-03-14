@@ -40,6 +40,7 @@ h3 {
   margin: 5px 0;
 }
 
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -97,13 +98,41 @@ nav ul {
   grid-area: main;
 }
 
+.card-price-and-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-price-and-quantity p {
+  margin: 0;
+}
+
+.card-title {
+  margin: 5px 0;
+}
+
 .cart-button {
   height: 40px;
+}
+
+.cart-card-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3px 12px;
 }
 
 .cart-count {
   position: relative;
   bottom: 60px;
+}
+
+.cart-game-card {
+  height: fit-content;
+  border: 1px solid lightgrey;
+  position: relative;
+  padding-bottom: 10px;
 }
 
 .cart-game-card img{
@@ -130,13 +159,16 @@ nav ul {
 }
 
 .cart-modal-content {
-  display: grid;
   background-color: #f3f4f6;
   width: 15%;
   height: 100vh;
   float: right;
   animation-name: modalslide;
   animation-duration: 0.5s;
+}
+
+.cart-modal-content > p {
+  height: 2rem;
 }
 
 .gameCard img {
