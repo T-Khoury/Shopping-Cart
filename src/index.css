@@ -118,7 +118,6 @@ nav ul {
 }
 
 .cart-modal {
-  display: grid;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -133,8 +132,11 @@ nav ul {
 .cart-modal-content {
   display: grid;
   background-color: #f3f4f6;
-  width: max-content;
-  height: max-content;
+  width: 15%;
+  height: 100vh;
+  float: right;
+  animation-name: modalslide;
+  animation-duration: 0.5s;
 }
 
 .gameCard img {
@@ -191,6 +193,15 @@ nav ul {
   display: flex;
   flex-direction: column;
   position: sticky;
+}
+
+@keyframes modalslide {
+  from {
+    right: -15%;
+  }
+  to {
+    right: 0;
+  }
 }
 
 
