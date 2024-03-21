@@ -31,7 +31,7 @@ const Card = ({ id, name, image, price, setCartItems, cartItems, handleCartButto
         >
             <Link to={`/product/${id}`} >
                 <img src={image}/>
-                <h4>{name}</h4>
+                <h4 className="card-title">{name}</h4>
             </Link>
             <p>{price}</p>
             <button onClick={() => handleCartButton(name, image, price, id)}>
