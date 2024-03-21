@@ -15,6 +15,8 @@ function App() {
   function handleModalButton() {
     let status = !cartModalOpen;
     setCartModalOpen(status);
+    let body = document.querySelector("body")
+    body.classList.toggle("overflow-hidden")
   }
 
   function handleCartButton(name, image, price, id) {

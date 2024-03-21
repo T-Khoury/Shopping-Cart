@@ -22,10 +22,14 @@ const CartModal = ({ isOpen, setCartModalOpen, cartItems, setCartItems }) => {
    
 
     const cartPrice = cartItems.length > 0 ? cartPrices.reduce((sum, a) => sum + a, 0).toFixed(2) : 0;
-    console.log(cartPrice)
+    console.log(cartPrice);
+
+
     function handleClick(e) {
         if (e.target.className === "cart-modal") {
             setCartModalOpen(false)
+            let body = document.querySelector("body");
+            body.classList.toggle("overflow-hidden");
         }
         
     }
@@ -36,11 +40,11 @@ const CartModal = ({ isOpen, setCartModalOpen, cartItems, setCartItems }) => {
     return (
         <div className="cart-modal" onClick={handleClick}>
             <div className="cart-modal-content">
-                <p>Shopping Cart</p>
-                <p>Total: {cartPrice}</p>
+                <p className="cart-title">Cart</p>
                 <div className="cart-items">
                     {cart}
                 </div>
+                <button className="cart-checkout-button">Checkout {cartPrice}</button>
             </div>
         </div>
     )

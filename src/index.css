@@ -135,6 +135,11 @@ nav ul {
   padding: 3px 12px;
 }
 
+.cart-checkout-button {
+  position: sticky;
+  bottom: 20px;
+}
+
 .cart-count {
   position: relative;
   bottom: 60px;
@@ -183,6 +188,9 @@ nav ul {
   height: 2rem;
 }
 
+.cart-title {
+  text-align: left;
+}
 .gameCard img {
   max-width: 275px;
   object-fit: fill;
@@ -210,6 +218,10 @@ nav ul {
 
 .modal-closed {
   display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .searchbar {
