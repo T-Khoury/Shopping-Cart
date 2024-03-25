@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import Card from "./GameCard";
 import SideBar from "./ShopSideBar";
+import searchicon from "../assets/search.svg"
 
 const key = "90cc2d37097041038ea82cf6fc69d6d5";
 
@@ -82,14 +83,13 @@ export const Shop = () => {
     return (
     <> 
         <div className="shop">
-            <h2>Hello</h2>
             <form onSubmit={e => {
                 e.preventDefault();
                 setView({ mode: "search", type: e.target[0].value})
                 e.target.reset()
             }}>
                 <input className="searchbar" type="text" />
-                <button className="searchbar-button">Search</button>
+                <button className="searchbar-button"><img src={searchicon} alt="" /></button>
             </form>
             <SideBar setView={setView}/>
             <div className="cards">

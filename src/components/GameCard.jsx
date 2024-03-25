@@ -33,10 +33,12 @@ const Card = ({ id, name, image, price, setCartItems, cartItems, handleCartButto
                 <img src={image}/>
                 <h4 className="card-title">{name}</h4>
             </Link>
-            <p>{price}</p>
-            <button onClick={() => handleCartButton(name, image, price, id)}>
-                Add to Cart
-            </button>
+            <div className="price-details">
+                <p>{price}</p>
+                <button onClick={() => handleCartButton(name, image, price, id)}>
+                    Add to Cart
+                </button>
+            </div>
         </div>
     )
 }

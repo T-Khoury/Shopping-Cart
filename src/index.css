@@ -214,10 +214,74 @@ nav ul {
 .cart-title {
   text-align: left;
 }
+
+.detail-category {
+  color: #38b000;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
+  padding: 8px 0;
+  margin: 8px 0;
+}
+
+.detail-info {
+  text-align: right;
+}
+
+
+.gameCard {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .gameCard img {
-  max-width: 275px;
+  max-width: 100%;
   object-fit: fill;
   aspect-ratio: 16 / 9;
+}
+
+.game-details {
+  display: flex;
+  color: black;
+}
+
+.game-details-left {
+  max-width: 60%;
+}
+
+.game-details-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8rem;
+  width: 320px;
+}
+
+.game-details-price {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.game-detail-buynow-button {
+  background-color: #8ce065;
+}
+
+.game-detail-cart-button {
+  margin-top: 1rem;
+}
+
+.game-detail-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 10rem;
+}
+
+.game-detail-picture {
+  max-width: 100%;
 }
 
 .genre-list, .sorting-list {
@@ -247,21 +311,48 @@ nav ul {
   overflow: hidden;
 }
 
-.searchbar {
-  width: 60%;
-  height: 1.5em;
-  text-align: end;
-  font-size: 1em;
-  padding-right: 5px;
+
+.price-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
 }
 
+.price-details button {
+  height: 3rem;
+}
+
+.searchbar {
+  width: 60%;
+  height: 80%;
+  text-align: end;
+  font-size: 1em;
+  padding-right: 1rem;
+  margin-right: .5rem;
+}
+
+.searchbar-button {
+  height: 100%;
+}
+
+.site-name {
+  font-size: 2rem;
+}
 .shop {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: auto;
   grid-template-areas: 
-    "search search"
+    "empty search"
     "sidebar main";
+  row-gap: 1rem;
+}
+
+.shop form {
+  grid-area: search;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .shop-side-nav {

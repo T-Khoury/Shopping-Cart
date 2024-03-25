@@ -45,7 +45,7 @@ function App() {
     <div className='container'>
       <nav>
         <div className="site-title">
-          <h1>Game Stuff</h1>
+          <h1 className='site-name'>Game Stuff</h1>
         </div>
         <ul>
           <li>
