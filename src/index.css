@@ -400,6 +400,18 @@ nav ul {
   position: sticky;
 }
 
+@media (max-width: 600px) {
+  .cart-modal {
+    display: grid;
+
+  }
+
+  .cart-modal-content {
+    width: 75%;
+    height: 75vh;
+  }
+}
+
 @keyframes modalslide {
   from {
     right: -15%;
