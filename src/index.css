@@ -215,6 +215,12 @@ nav ul {
   text-align: left;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .detail-category {
   color: #38b000;
 }
@@ -302,6 +308,30 @@ nav ul {
   color: #38b000;
 }
 
+.home-browse-button {
+  background-color: #38b000;
+}
+.home-container {
+  flex-grow: 1;
+  display: grid;
+}
+
+.home-description {
+  font-size: 2rem;
+  color: black;
+}
+.home-description-span {
+  color: #38b000;
+}
+.home-title {
+  font-size: 7rem;
+  margin-bottom: 5px;
+}
+
+.home-wrapper {
+  margin-top: 8rem;
+}
+
 
 .modal-closed {
   display: none;
@@ -338,6 +368,7 @@ nav ul {
 .site-name {
   font-size: 2rem;
 }
+
 .shop {
   display: grid;
   grid-template-columns: 1fr 4fr;

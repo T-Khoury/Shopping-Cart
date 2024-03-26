@@ -3,6 +3,7 @@ import ErrorPage from "./ErrorPage";
 import App from "./App";
 import { Shop } from "./Shop";
 import GamePage from "./GameDetail";
+import Home from "./Home"
 
 const Router = () => {
     const router = createBrowserRouter([
@@ -13,7 +14,7 @@ const Router = () => {
             children: [
                 {
                     path: "/home",
-                    /*element: <Home />,*/
+                    element: <Home />,
                 },
                 {
                     path: "/shop/",

@@ -45,7 +45,7 @@ function App() {
     <div className='container'>
       <nav>
         <div className="site-title">
-          <Link to="/home"><h1 className='site-name'>Game Stuff</h1></Link>
+          <Link to="/home"><h1 className='site-name'>Game Shop</h1></Link>
         </div>
         <ul>
           <li>
