@@ -29,7 +29,6 @@ const SideBar = ({ setView }) => {
         </li>
     )
     function handleGenreChange(e) {
-        console.log(e.target.id)
         setView({ mode: "genre", type: e.target.id})
     }
     function handleSortChange(e) {

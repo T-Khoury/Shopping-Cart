@@ -1,7 +1,6 @@
 import CartModalGameCard from "./CartModalGameCard";
 
 const CartModal = ({ isOpen, setCartModalOpen, cartItems, setCartItems }) => {
-    console.log(isOpen);
     let cart = cartItems.map(game =>
         <CartModalGameCard
             id={game.id}
@@ -22,7 +21,6 @@ const CartModal = ({ isOpen, setCartModalOpen, cartItems, setCartItems }) => {
    
 
     const cartPrice = cartItems.length > 0 ? cartPrices.reduce((sum, a) => sum + a, 0).toFixed(2) : 0;
-    console.log(cartPrice);
 
 
     function handleClick(e) {

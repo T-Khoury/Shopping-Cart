@@ -59,8 +59,7 @@ const GamePage = () => {
     const publisher = data.publishers[0].name;
     const platforms = data.platforms.map((platform) => platform.platform.name)
     
-    console.log(data);
-    console.log(platforms);
+
 
 
     return (
