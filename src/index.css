@@ -367,6 +367,40 @@ nav ul {
   background-color: #85e558;
 }
 
+.site-credits {
+  position: absolute;
+  bottom: 1rem;
+  height: 6rem;
+  width: fit-content;
+  padding: 6px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+  background-color: rgba(46, 110, 17);
+}
+
+.site-credits a {
+  padding: 6px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease-out 0.15s;
+}
+
+.site-credits a:hover {
+  scale: 1.08;
+  background-color: #9ef09e;
+}
+
+.site-credits img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 .site-name {
   font-size: 2rem;
 }
