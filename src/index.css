@@ -127,6 +127,9 @@ nav ul {
 
 .cart-button {
   height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 .cart-card-button {
@@ -143,8 +146,8 @@ nav ul {
 }
 
 .cart-count {
-  position: relative;
-  bottom: 60px;
+  margin: 0;
+  padding-bottom: 4px;
 }
 
 .cart-game-card {

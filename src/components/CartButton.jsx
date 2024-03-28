@@ -6,6 +6,7 @@ const CartButton = ({ quantity, handleModalButton }) => {
         <>
             <button className="cart-button" onClick={handleModalButton}>
                 <img src={carticon} alt=""/>
+                |
                 <p className="cart-count">{quantity}</p>
             </button>
         </>
