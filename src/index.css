@@ -359,10 +359,12 @@ nav ul {
   font-size: 1em;
   padding-right: 1rem;
   margin-right: .5rem;
+  margin-left: .5rem;
 }
 
 .searchbar-button {
   height: 100%;
+  background-color: #85e558;
 }
 
 .site-name {
