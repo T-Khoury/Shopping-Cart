@@ -251,6 +251,7 @@ nav ul {
   max-width: 100%;
   object-fit: fill;
   aspect-ratio: 16 / 9;
+  height: 210px;
 }
 
 .game-details {
