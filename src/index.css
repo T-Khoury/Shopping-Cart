@@ -7,11 +7,9 @@
   font-family: Alata-Regular, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: bold;
-
-  color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87); */
-  color: #00171f;
-  background-color: #242424;
+  color: #008000;
+  background-color: #ffffff;
+  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -56,7 +54,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #f9f9f9;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -68,22 +66,15 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
 
-@media (prefers-color-scheme: light) {
-  /* :root {
-    color: #213547;
-    background-color: #ffffff;
-  } */
+/* @media (prefers-color-scheme: dark) {
   :root {
-    color: #008000;
-    background-color: #ffffff;
+    color: #00171f;
+    background-color: #242424;
   }
   a:hover {
     color: #1f487e;
   }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+} */
 
 nav {
   display: flex;
